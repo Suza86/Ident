@@ -1,0 +1,4 @@
+com\Identyum\IdentyumController.class
+com\Identyum\IdentyumApplication.class
+com\Identyum\User.class
+com\Identyum\UserRepository.class

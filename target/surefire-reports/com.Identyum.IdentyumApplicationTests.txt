@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.Identyum.IdentyumApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 6.39 s <<< FAILURE! - in com.Identyum.IdentyumApplicationTests
+contextLoads  Time elapsed: 0.031 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'identyumController': Unsatisfied dependency expressed through field 'userRepo'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.Identyum.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract com.Identyum.User com.Identyum.UserRepository.findByUser(java.lang.String) but parameter 'Optional[user_name]' not found in annotated query 'SELECT * FROM user WHERE user_name = :user'!
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.Identyum.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract com.Identyum.User com.Identyum.UserRepository.findByUser(java.lang.String) but parameter 'Optional[user_name]' not found in annotated query 'SELECT * FROM user WHERE user_name = :user'!
+Caused by: java.lang.IllegalStateException: Using named parameters for method public abstract com.Identyum.User com.Identyum.UserRepository.findByUser(java.lang.String) but parameter 'Optional[user_name]' not found in annotated query 'SELECT * FROM user WHERE user_name = :user'!
+
